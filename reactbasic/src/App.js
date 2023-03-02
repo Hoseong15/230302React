@@ -19,7 +19,7 @@ function App() {
   //   // width : '100px',
   //   // height: '100px'
   // }; 
-
+  
   return (
     <div className="App">
        {/* <div className='box' style={style}>zdzd</div>
@@ -50,10 +50,9 @@ function App() {
        </div>
 
        <div className='title'>
-
         <h4>{title[2]}</h4>
-
         <span onClick={() => {setClick(click + 1)}}>👍{click}</span>
+        <button onClick={() => {setClick(click + 1)}}>Click Me</button>
         <p>안녕하세요 저는 인호성입니다.</p>
        </div>
 
@@ -61,6 +60,7 @@ function App() {
         let copy = [...title]
         copy[0] = '리액트 너무 재밌어요!';
         copy[1] = '리액트 너무 어려운걸요~';
+        copy[2] = '매일 복습해야겠어요';
         settitle(copy)
        }}>글 제목 변경</button>
        
@@ -69,6 +69,14 @@ function App() {
         copy = copy.sort()
         settitle(copy)
        }}>글정렬</button>
+
+       <button onClick={()=> {
+        let copy = [...title]
+        copy[0] = '이걸 한방에 못바꾸나';
+        copy[1] = '하나하나씩 다시 쳐야하나';
+        copy[2] = '넘 귀찮은데';
+        settitle(copy)
+       }}>Click Me</button>
 
     </div>
   );
