@@ -3,6 +3,10 @@ import logo from './logo.svg';
 import './App.css';
 import {useState} from 'react';
 import State from './component/State';
+import Box from './component/Box';
+import './component/State.css';
+import './component/Box.css';
+
 
 function App() {
   // State라는거에 반응하기 때문에 react
@@ -50,9 +54,15 @@ function App() {
 
   return (
     <div className='App'>
-      {/* <State/> */}
+      {/* <State/>
       <h1>{count}</h1>
-    <button onClick={increase}>+1</button>
+    <button onClick={increase}>+1</button> */}
+      <div className='box'>
+        <Box num='1'/>
+        <Box num='2'/>
+        <Box num='3'/>
+        <Box num='4'/>
+      </div>
     </div>
   )
 }
