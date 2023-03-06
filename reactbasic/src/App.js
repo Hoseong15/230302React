@@ -53,6 +53,10 @@ function App() {
   // State는 기존 값을 잃어버리지 않고 기억하고 있다.
   let num1 = [1,2,3,4]
   let name = ['호성', '호성1', '호성2']
+
+  let name1 = ['호성','영재', '승빈', '상현']
+  let num2 = [1,2,3,4]
+  let num3 = [5,6,7,8]
  
   return (
     <div className='App'>
@@ -66,11 +70,20 @@ function App() {
         <Box name='상현' num='4'/>
       </div> */}
       
-      {name.map(function(a,i) {
+      {/* {name.map(function(a,i) {
         return (
           <div  className='box' key={i}>
           <h1>Box{num1[i]}</h1>
           <h2>{name[i]}</h2>
+          </div>
+        )
+      })} */}
+
+      {name1.map(function(a, i) {
+        return (
+          <div  className='box' key={i}>
+            <h1>Box{num2[i]}</h1>
+            <h2>{name1[i]}{num3[i]}</h2>
           </div>
         )
       })}
