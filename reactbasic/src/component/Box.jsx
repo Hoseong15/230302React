@@ -19,7 +19,7 @@ const Box = (props) => {
   return (
     <div  className='box'>
       <h1>Box{props.num}</h1>
-      <h2>Hoseong{props.num}</h2>
+      <h2>{props.name}</h2>
     </div>
     
   )
