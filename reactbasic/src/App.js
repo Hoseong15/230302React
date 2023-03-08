@@ -6,6 +6,8 @@ import State from './component/State';
 import Box from './component/Box';
 import './component/State.css';
 import './component/Box.css';
+import Comment from './component/Comment';
+import CommentList from './component/CommentList';
 
 
 function App() {
@@ -51,12 +53,12 @@ function App() {
   // State 주의할 점
 
   // State는 기존 값을 잃어버리지 않고 기억하고 있다.
-  let num1 = [1,2,3,4]
-  let name = ['호성', '호성1', '호성2']
+  // let name = ['호성','영재', '승빈', '상현']
+  // let num2 = [1,2,3,4]
+  // let num3 = [5,6,7,8]
 
-  let name1 = ['호성','영재', '승빈', '상현']
-  let num2 = [1,2,3,4]
-  let num3 = [5,6,7,8]
+  // let [name, setname] = useState(['라라라', '리리리', '로로로'])
+  // let [text, settext] = useState(['안녕하세요, 집에 가고싶다', '리액트 재밌다', '리액트 리액트 리액트'])
  
   return (
     <div className='App'>
@@ -70,26 +72,36 @@ function App() {
         <Box name='상현' num='4'/>
       </div> */}
       
-      {/* {name.map(function(a,i) {
+  
+{/* 
+      {name.map(function(a, i) {
         return (
           <div  className='box' key={i}>
-          <h1>Box{num1[i]}</h1>
-          <h2>{name[i]}</h2>
+            <h1>Box{num2[i]}</h1>
+            <h2>{num2[i]}{name[i]}{num3[i]}</h2>
           </div>
         )
       })} */}
 
-      {name1.map(function(a, i) {
+      {/* <div className=''>
+        <Comment name='라라라' text='안녕하세요, 집에가고싶다'/>
+        <Comment name='리리리' text='리액트 재밌다'/>
+        <Comment name='로로로' text='리액트 리액트 리액트'/>
+      </div> */}
+
+      {/* {name.map(function(a, i) {
         return (
-          <div  className='box' key={i}>
-            <h1>Box{num2[i]}</h1>
-            <h2>{name1[i]}{num3[i]}</h2>
-          </div>
+          <Comment name={name[i]} text={text[i]}/>
         )
-      })}
+      })} */}
+
+      <div>
+        <CommentList/>
+      </div>
 
     </div>
   )
 }
 
 export default App;
+
