@@ -44,27 +44,26 @@ function CommentList() {
     setContent('');
     })()
    )
-    
   };
 
   
   // input에 입력했을 때 나오게 하는것 ////
-  // const [idValue, setId] = useState();
-  // const [pwValue, setPw] = useState();
+  const [idValue, setId] = useState();
+  const [pwValue, setPw] = useState();
 
-  // const saveId = (e) => {
-  //   setId(e.target.value)
-  // }
-  // const savePw = (e) => {
-  //   setPw(e.target.value)
-  // }
+  const saveId = (e) => {setId(e.target.value)}
+  const savePw = (e) => {setPw(e.target.value)}
   
-  // const addtyping = () => {
-  //   const typing = [...commentList, {name : idValue, comment : pwValue}]
-  //   setCommentList(typing)
-  //   setId('')
-  //   setPw('')
-  // }
+  const addtyping = () => {
+    idValue === '' || pwValue === '' ? alert('입력하고 다시 클릭하쇼') : (
+      (() => {
+        const typing = [...commentList, {name : idValue, comment : pwValue}]
+        setCommentList(typing)
+        setId('')
+        setPw('')
+      })()
+    )
+  }
 
 
   return (
@@ -82,9 +81,10 @@ function CommentList() {
       댓글 : <input type="text" value={content} onChange={(e)=> setContent(e.target.value)} />
       <button onClick={addComment}>추가</button>
    
-      {/* <p>이름: <input onChange={saveId} type="text" value={idValue} /></p>
-      <p>댓글: <input onChange={savePw} type="text" value={pwValue} /></p>
-      <button onClick={addtyping}>글쓰기</button> */}
+      {/* input에 입력했을 때 나오게 하는것 */}
+      <div>이름: <input onChange={saveId} type="text" value={idValue} /></div>
+      <div>댓글: <input onChange={savePw} type="text" value={pwValue} /></div>
+      <button onClick={addtyping}>글쓰기</button>
 
     </div>
   )
