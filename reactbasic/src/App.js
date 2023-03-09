@@ -101,11 +101,17 @@ function App() {
       <div>
         <CommentList/>
         {/* <div className='back'></div> */}
+
+         {/* <div style={{backgroundImage : 'url(' + back + ')', height : '400px'}}></div> */}
+
         <div style={{ backgroundImage: `url(${backImage})`,height: '500px', backgroundRepeat: 'no-repeat'}}></div>
+
         <img src={process.env.PUBLIC_URL + 'rabbit.jpg'} />;
 
-        {/* <div style={(backgroundImage : 'url(https://cdn.aitimes.com/news/photo/202204/143854_149286_5624.png)')}></div> */}
+         {/* <img src="https://m.media-amazon.com/images/M/MV5BMTgxOTY4Mjc0MF5BMl5BanBnXkFtZTcwNTA4MDQyMw@@._V1_FMjpg_UX1000_.jpg" alt="" /> */}
+
         <img src={backImage} alt="" />
+        
       </div>
 
     </div>
