@@ -104,14 +104,14 @@ function App() {
 
          {/* <div style={{backgroundImage : 'url(' + back + ')', height : '400px'}}></div> */}
 
-        <div style={{ backgroundImage: `url(${backImage})`,height: '500px', backgroundRepeat: 'no-repeat'}}></div>
+        {/* <div style={{ backgroundImage: `url(${backImage})`,height: '500px', backgroundRepeat: 'no-repeat'}}></div>
 
-        <img src={process.env.PUBLIC_URL + 'rabbit.jpg'} />;
+        <img src={process.env.PUBLIC_URL + 'rabbit.jpg'} />; */}
 
          {/* <img src="https://m.media-amazon.com/images/M/MV5BMTgxOTY4Mjc0MF5BMl5BanBnXkFtZTcwNTA4MDQyMw@@._V1_FMjpg_UX1000_.jpg" alt="" /> */}
 
-        <img src={backImage} alt="" />
-        
+        {/* <img src={backImage} alt="" /> */}
+
       </div>
 
     </div>

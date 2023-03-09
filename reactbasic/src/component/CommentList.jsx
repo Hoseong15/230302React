@@ -32,14 +32,21 @@ function CommentList() {
 
   /////// 추가 버튼 클릭했을 때 박스 /////
   const addComment = () => {
-    // const add = {name : '여상현', comment : '리액트 어렵다~~!' }
+   // name, content value값이 없을 때
+   name === '' || content === '' ? alert('이름과 댓글을 입력하세요') : (
+    (() => {
+      // const add = {name : '여상현', comment : '리액트 어렵다~~!' }
     // setCommentList([add, ...commentList])
     const add = {name : name, comment : content}
     setCommentList([add, ...commentList])
     // state변경 함수에 빈 문자열을 넣어서 input에 작성된 내용을 초기화
     setName('');
     setContent('');
-  }
+    })()
+   )
+    
+  };
+
   
   // input에 입력했을 때 나오게 하는것 ////
   // const [idValue, setId] = useState();
@@ -74,7 +81,7 @@ function CommentList() {
       이름 : <input type="text" value={name} onChange={(e)=> setName(e.target.value)} />
       댓글 : <input type="text" value={content} onChange={(e)=> setContent(e.target.value)} />
       <button onClick={addComment}>추가</button>
-
+   
       {/* <p>이름: <input onChange={saveId} type="text" value={idValue} /></p>
       <p>댓글: <input onChange={savePw} type="text" value={pwValue} /></p>
       <button onClick={addtyping}>글쓰기</button> */}
@@ -85,3 +92,5 @@ function CommentList() {
 
 
 export default CommentList;
+
+   
