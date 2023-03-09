@@ -8,6 +8,9 @@ import './component/State.css';
 import './component/Box.css';
 import Comment from './component/Comment';
 import CommentList from './component/CommentList';
+import backImage from './강아지이미지.jpg'
+
+
 
 
 function App() {
@@ -97,6 +100,12 @@ function App() {
 
       <div>
         <CommentList/>
+        {/* <div className='back'></div> */}
+        <div style={{ backgroundImage: `url(${backImage})`,height: '500px', backgroundRepeat: 'no-repeat'}}></div>
+        <img src={process.env.PUBLIC_URL + 'rabbit.jpg'} />;
+
+        {/* <div style={(backgroundImage : 'url(https://cdn.aitimes.com/news/photo/202204/143854_149286_5624.png)')}></div> */}
+        <img src={backImage} alt="" />
       </div>
 
     </div>

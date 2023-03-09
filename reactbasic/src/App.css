@@ -9,3 +9,11 @@
   height: 400px;
 } */
 
+.back {
+  height: 500px;
+  background-image: url(./강아지이미지.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  margin-top: 10px;
+}
